@@ -31,6 +31,7 @@ class UserFactory extends Factory
      *
      * @return static
      */
+    
     public function unverified()
     {
         return $this->state(fn (array $attributes) => [
