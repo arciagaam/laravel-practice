@@ -46,7 +46,7 @@ class ListingController extends Controller
         $formData['user_id'] = auth()->id();
 
         Listing::create($formData);
-        return redirect('/')->with('message', 'Listing created.');
+        return redirect('/')->with('message', 'Listing created');
     }
 
     public function edit(Listing $listing)
@@ -87,7 +87,7 @@ class ListingController extends Controller
         if($listing->user_id != auth()->id()) {
             abort('403', 'Oops! This is not your listing :p');
         }
-        
+
         $listing->delete();
         return redirect('/')->with('message', 'Listing deleted successfully.');
     }
