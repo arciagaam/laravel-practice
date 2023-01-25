@@ -1,8 +1,9 @@
 @props(['listing'])
 
-<div class="flex flex-row rounded-md shadow-md">
-    <div class="flex min-w-[50%]">
-        <img src="{{asset('images/no-image.png')}}" alt="">
+<div class="flex flex-col rounded-md shadow-md
+">
+    <div class="flex flex-row justify-center items-center self-center w-[80%]">
+        <img class="h-auto w-fit" src="{{$listing->logo ? asset('storage/' . $listing->logo) : asset('images/no-image.png')}}" alt="">
     </div>
 
     <div class="flex flex-col p-5 gap-5">
